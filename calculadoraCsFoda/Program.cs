@@ -2,12 +2,13 @@
 {
     class Program
     {
+        float num1;
+        float num2;
         static void Main(string[] args)
         {
             while (true)
             {
-                float num1;
-                float num2;
+                
                 int escolha;
 
                 Console.WriteLine("Calculadora");
@@ -38,139 +39,19 @@
 
                 if (escolha == 1)
                 {
-                    Console.WriteLine("Soma!");
-                    while (true)
-                    {
-                        Console.WriteLine("Escreva seu número: ");
-                        try
-                        {
-                            num1 = float.Parse(Console.ReadLine());
-                            break;
-                        }
-                        catch
-                        {
-                            Console.WriteLine("Erro: Digite um número válido!");
-                        }
-                    }
-                    while (true)
-                    {
-                        Console.WriteLine("digite seu outro número: ");
-                        try
-                        {
-                            num2 = float.Parse(Console.ReadLine());
-                            break;
-                        }
-                        catch
-                        {
-                            Console.WriteLine("Erro: Digite um número válido!");
-                        }
-                    }
-                    float soma = num1 + num2;
-                    Console.WriteLine("resultado: " + soma);
+                    Soma ();
                 }
                 else if (escolha == 2)
                 {
-                    Console.WriteLine("Subtração!");
-                    while (true)
-                    {
-                        Console.WriteLine("Escreva seu número: ");
-                        try
-                        {
-                            num1 = float.Parse(Console.ReadLine());
-                            break;
-                        }
-                        catch
-                        {
-                            Console.WriteLine("Erro: Digite um número válido!");
-                        }
-                    }
-                    while (true)
-                    {
-                        Console.WriteLine("digite seu outro número: ");
-                        try
-                        {
-                            num2 = float.Parse(Console.ReadLine());
-                            break;
-                        }
-                        catch
-                        {
-                            Console.WriteLine("Erro: Digite um número válido!");
-                        }
-                    }
-                    float subtracao = num1 - num2;
-                    Console.WriteLine("resultado: " + subtracao);
+                    subtracao();
                 }
                 else if (escolha == 3)
                 {
-                    Console.WriteLine("Multiplicação!");
-                    while (true)
-                    {
-                        Console.WriteLine("Escreva seu número: ");
-                        try
-                        {
-                            num1 = float.Parse(Console.ReadLine());
-                            break;
-                        }
-                        catch
-                        {
-                            Console.WriteLine("Erro: Digite um número válido!");
-                        }
-                    }
-                    while (true)
-                    {
-                        Console.WriteLine("Quer multiplicar por quantas vezes? ");
-                        try
-                        {
-                            num2 = float.Parse(Console.ReadLine());
-                            break;
-                        }
-                        catch
-                        {
-                            Console.WriteLine("Erro: Digite um número válido!");
-                        }
-                    }
-                    float multiplicacao = num1 * num2;
-                    Console.WriteLine("resultado: " + multiplicacao);
+                    multiplicacao();
                 }
                 else
                 {
-                    Console.WriteLine("Divisão!");
-                    while (true)
-                    {
-                        Console.WriteLine("Escreva seu número: ");
-                        try
-                        {
-                            num1 = float.Parse(Console.ReadLine());
-                            break;
-                        }
-                        catch
-                        {
-                            Console.WriteLine("Erro: Digite um número válido!");
-                        }
-                    }
-                    while (true)
-                    {
-                        Console.WriteLine("Quer dividir por qual número? ");
-                        try
-                        {
-                            num2 = float.Parse(Console.ReadLine());
-                            break;
-                        }
-                        catch
-                        {
-                            Console.WriteLine("Erro: Digite um número válido!");
-                        }
-                    }
-                    if (num2 != 0)
-                    {
-                        float divisao = num1 / num2;
-                        Console.WriteLine("resultado: " + divisao);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Erro: Divisão por zero!");
-                    }
-
+                    divisao();
                 }
                 Console.WriteLine("Deseja fazer outra conta? (sim/não)");
                 string resposta = Console.ReadLine();
@@ -184,6 +65,150 @@
                 }
 
             }
+        }
+        static void Soma()
+        {
+            float somaN1;
+            float somaN2;
+            Console.WriteLine("Soma!");
+                    while (true)
+                    {
+                        Console.WriteLine("Escreva seu número: ");
+                        try
+                        {
+                            somaN1 = float.Parse(Console.ReadLine());
+                            break;
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Erro: Digite um número válido!");
+                        }
+                    }
+                    while (true)
+                    {
+                        Console.WriteLine("digite seu outro número: ");
+                        try
+                        {
+                            somaN2 = float.Parse(Console.ReadLine());
+                            break;
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Erro: Digite um número válido!");
+                        }
+                    }
+                    float soma = somaN1 + somaN2;
+                    Console.WriteLine("resultado: " + soma);
+                }
+        static void subtracao()
+        {
+            float subN1;
+            float subN2;
+
+            Console.WriteLine("Subtração!");
+                    while (true)
+                    {
+                        Console.WriteLine("Escreva seu número: ");
+                        try
+                        {
+                            subN1 = float.Parse(Console.ReadLine());
+                            break;
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Erro: Digite um número válido!");
+                        }
+                    }
+                    while (true)
+                    {
+                        Console.WriteLine("digite seu outro número: ");
+                        try
+                        {
+                            subN2 = float.Parse(Console.ReadLine());
+                            break;
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Erro: Digite um número válido!");
+                        }
+                    }
+                    float subtracao = subN1 - subN2;
+                    Console.WriteLine("resultado: " + subtracao);
+        }
+        static void multiplicacao()
+        {
+            float multN1;
+            float multN2;
+            Console.WriteLine("Multiplicação!");
+                    while (true)
+                    {
+                        Console.WriteLine("Escreva seu número: ");
+                        try
+                        {
+                            multN1 = float.Parse(Console.ReadLine());
+                            break;
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Erro: Digite um número válido!");
+                        }
+                    }
+                    while (true)
+                    {
+                        Console.WriteLine("Quer multiplicar por quantas vezes? ");
+                        try
+                        {
+                            multN2 = float.Parse(Console.ReadLine());
+                            break;
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Erro: Digite um número válido!");
+                        }
+                    }
+                    float multiplicacao = multN1 * multN2;
+                    Console.WriteLine("resultado: " + multiplicacao);
+        }
+        static void divisao()
+        {
+            float divN1;
+            float divN2;
+            Console.WriteLine("Divisão!");
+                    while (true)
+                    {
+                        Console.WriteLine("Escreva seu número: ");
+                        try
+                        {
+                            divN1 = float.Parse(Console.ReadLine());
+                            break;
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Erro: Digite um número válido!");
+                        }
+                    }
+                    while (true)
+                    {
+                        Console.WriteLine("Quer dividir por qual número? ");
+                        try
+                        {
+                            divN2 = float.Parse(Console.ReadLine());
+                            break;
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Erro: Digite um número válido!");
+                        }
+                    }
+                    if (divN2 != 0)
+                    {
+                        float divisao = divN1 / divN2;
+                        Console.WriteLine("resultado: " + divisao);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Erro: Divisão por zero!");
+                    }
         }
     }
 }
